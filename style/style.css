@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: calc(10px + 1vmin);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column-reverse;
+    place-items: center;
+    justify-content: center;
+
+    background-color: #f1ecdf;
+}
+
+.form {
+    width: 20em;
+    padding: 1em;
+    border-radius: .4em;
+
+    background-color: #f58723;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: .2em;
+    }
+    & input {
+        background-color: rgba(0, 0, 0, .1);
+        border: none;
+        border-radius: .4em;
+        padding: .5em 0em;
+        padding-left: 2em;
+        font-size: calc(10px + .8vmin);
+    
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        width: 100%;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, .7);
+        }
+    }
+    & button {
+        background-color: #000000;
+        color: #d4c9ad;
+        font-weight: 600;
+        padding: .9em .6em;
+        border: none;
+        border-radius: .3em;
+    
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5em;
+        font-family: 'Quicksand', sans-serif;
+    }
+    & button:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.logo {
+    align-items: center;
+    
+    & > img {
+        width: 10em;
+    }
+}
+
+.input-box {
+    position: relative;
+
+    & > span {
+        position: absolute;
+        left: .2em;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+/* utility classes */
+.hidden {
+    opacity: 0;
+}
+.not-sucess {
+    animation: blink 1.9s ease-in-out forwards;
+}
+.load {
+    animation: load 2.2s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+        color: red;
+    }
+    50% {
+        opacity: 1;
+        color: #000000;
+    }
+    70% {
+        opacity: 1;
+        color: red;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* media query */
+@media (max-width: 478px) {
+    .input-box {
+        & > span {
+            left: .05em;
+        }
+    }
+    input {
+        padding-left: 2.1em;
+    }
+}

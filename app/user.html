@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://www.svgrepo.com/show/267218/orange.svg">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="../style/app.css" />
+    <script src="../script/scriptApp/fetchMessages.js"></script>
+    <title>User - OrangeMessage</title>
+  </head>
+  <body>
+    <h3 data-profile>User</h3>
+    <div class="app">
+      <div class="perfil">
+        <img
+          src="https://www.svgrepo.com/show/408429/user-person-profile-block-account-circle.svg"
+          alt="profile_avatar"
+        />
+        <h3>Admin</h3>
+      </div>
+      <div class="message-area" data-messages></div>
+      <div class="input-message">
+        <input type="text" placeholder="Digitar" data-input-message />
+        <button data-send>
+          <span class="material-symbols-outlined"> check_circle </span>
+        </button>
+      </div>
+    </div>
+    <script src="../script/scriptApp/actions.js"></script>
+  </body>
+</html>
